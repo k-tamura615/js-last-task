@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>割り勘アプリ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>割り勘アプリ</h1>
+            <form>
+                <div class="input-group">
+                    <label for="totalAmount">合計金額</label>
+                    <input type="number" id="totalAmount" placeholder="例: 5000" min="0">
+                </div>
+                
+                <div class="input-group">
+                    <label for="peopleCount">人数</label>
+                    <input type="number" id="peopleCount" placeholder="例: 3" min="1">
+                </div>
+
+                <div class="input-group">
+                    <label for="ratio">払う割合（%）</label>
+                    <input type="number" id="ratio" placeholder="例: 100" min="0" max="100">
+                </div>
+                
+                <div class="input-group">
+                    <label for="rounding">端数の処理</label>
+                    <select id="rounding">
+                        <option value="none">なし</option>
+                        <option value="up">切り上げ</option>
+                        <option value="down">切り捨て</option>
+                    </select>
+                </div>
+                
+                <button type="button" onclick="calculateSplit()">計算する</button>
+            </form>
+            <div class="result">
+                <h2>結果</h2>
+                <div id="result">金額を入力して計算ボタンを押してください。</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
